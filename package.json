@@ -1,0 +1,28 @@
+{
+  "name": "product-catalog-app",
+  "version": "1.0.0",
+  "author": "Mario de Biase",
+  "license": "ISC",
+  "description": "Show all available phones",
+  "repository": "https://github.com/debiasej/phone-catalog-app.git",
+  "scripts": {
+    "start": "concurrently \"npm run server\"",
+    "server": "npm run server --prefix server",
+    "precommit": "lint-staged",
+    "lint": "standard --fix --env mocha"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "standard": "^10.0.3"
+  }
+}
