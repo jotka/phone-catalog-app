@@ -1,20 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
+import { AppRoutingModule } from './app-routing.module'
+import { CatalogModule } from './catalog/catalog.module'
 
-import { AppComponent } from './app.component';
-import { PhoneListComponent } from './catalog/containers/phone-list/phone-list.component';
-import { PhoneDetailComponent } from './catalog/components/phone-detail/phone-detail.component';
+import { AppComponent } from './app.component'
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PhoneListComponent,
-    PhoneDetailComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    CatalogModule,
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
