@@ -1,14 +1,12 @@
 import { Action } from '@ngrx/store'
 
-export const ActionTypes = {
-  DUMMY_ACTION: '[App] DUMMY_ACTION',
-}
+export const CLEAN_FIRST_ACCESS = '[App] CLEAN_FIRST_ACCESS'
 
-export class DummyAction implements Action {
-  type = ActionTypes.DUMMY_ACTION
+export class CleanFirstAccess implements Action {
+  readonly type = CLEAN_FIRST_ACCESS
 
-  constructor(public payload: any) {}
+  constructor() {}
 }
 
 export type All =
-  | DummyAction
+  | CleanFirstAccess
