@@ -6,4 +6,5 @@ export interface Phone {
   maker: string
   color: string
   price: string
+  stock: number
 }

@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
 
 import { CatalogRoutingModule } from './catalog-routing.module'
 
 import { PhoneListComponent } from './containers/phone-list/phone-list.component'
 import { PhoneDetailComponent } from './components/phone-detail/phone-detail.component'
-import { CommonModule } from '@angular/common'
+import { MatCardModule } from '@angular/material'
 
 
 @NgModule({
   imports: [
     CommonModule,
-    CatalogRoutingModule
+    CatalogRoutingModule,
+    MatCardModule
   ],
   declarations: [
     PhoneListComponent,

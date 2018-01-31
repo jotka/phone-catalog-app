@@ -1,11 +1,15 @@
-<div>
-  <div>
-    <img src={{phone.image}} />
-  </div>
-  <div>
-    <div>{{phone.title}}</div>
-    <div>{{phone.maker}}</div>
-    <div>{{phone.color}}</div>
-  </div>
-</div>
-
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{phone.title}}</mat-card-title>
+    <mat-card-subtitle>{{phone.maker}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-lg-image class="card-img" src={{phone.image}} />
+  <mat-card-content>
+    <p class="card-desc">
+      {{phone.description}}
+    </p>
+    <p>Color {{phone.color}}</p>
+    <p class="price">{{phone.price}}</p>
+    <span>Solo hay {{phone.stock}} en stock</span>
+  </mat-card-content>
+</mat-card>
