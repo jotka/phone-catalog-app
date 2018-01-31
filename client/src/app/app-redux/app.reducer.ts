@@ -8,9 +8,7 @@ export const initialState: State = {
   firstAccess: true
 }
 
-export type Action = appActions.All
-
-export function reducer(state: State = initialState, action: Action): State {
+export function reducer(state: State = initialState, action: appActions.All): State {
   switch (action.type) {
 
     case appActions.CLEAN_FIRST_ACCESS: {

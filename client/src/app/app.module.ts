@@ -9,6 +9,12 @@ import { AppComponent } from './app.component'
 import { reducersMap } from './app-redux/app.store'
 import { metaReducers } from './app-redux/meta.reducer'
 
+import { CatalogEffects } from './catalog/redux/catalog.effects'
+import { EffectsModule } from '@ngrx/effects'
+import { CatalogService } from './catalog/services/catalog.service'
+import { HttpClientModule } from '@angular/common/http'
+import { Url } from './global/url'
+
 
 @NgModule({
   declarations: [
@@ -16,14 +22,19 @@ import { metaReducers } from './app-redux/meta.reducer'
   ],
   imports: [
     CatalogModule,
+    HttpClientModule,
     StoreModule.forRoot(reducersMap, { metaReducers }),
+    EffectsModule.forRoot([CatalogEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 25 //  Retains last 25 states
     }),
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    Url,
+    CatalogService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
