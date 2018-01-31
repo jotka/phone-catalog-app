@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Store } from '@ngrx/store'
-import { Observable } from 'rxjs/Observable'
 import { Subscription } from 'rxjs/Subscription'
 
 import * as appReducer from '../../../app-redux/app.store'
@@ -15,15 +14,22 @@ import { Phone } from '../../models/catalog.model'
   styleUrls: ['./phone-list.component.css']
 })
 export class PhoneListComponent implements OnInit, OnDestroy {
-  phones$: Observable<Array<Phone>>
+  phonesSub: Subscription
+  phones: Array<Phone>
 
   constructor(private store: Store<appReducer.State>) {}
 
   ngOnInit() {
-    this.phones$ = this.store.select(catalogReducer.getPhones)
+    this.phonesSub = this.store
+      .select(catalogReducer.getPhones)
+      .subscribe((phones: Array<Phone>) => {
+        this.phones = phones
+    })
+
     this.store.dispatch(new catalogActions.FetchPhones())
   }
 
-  ngOnDestroy() {}
-
+  ngOnDestroy() {
+    this.phonesSub.unsubscribe()
+  }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core'
+
+import { Phone } from '../../models/catalog.model'
 
 @Component({
   selector: 'app-phone-detail',
@@ -6,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./phone-detail.component.css']
 })
 export class PhoneDetailComponent implements OnInit {
+  @Input() phone: Array<Phone>
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
