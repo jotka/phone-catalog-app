@@ -1,7 +1,17 @@
 <div class="">
   <ul>
-    <li><app-phone-detail></app-phone-detail></li>
-    <li><app-phone-detail></app-phone-detail></li>
-    <li><app-phone-detail></app-phone-detail></li>
+    <ng-container *ngIf="phones$ | async as phones">
+      <div *ngFor="let phone of phones">
+        <li><app-phone-detail></app-phone-detail></li>
+      </div>
+    </ng-container>
   </ul>
 </div>
+
+<ng-container *ngIf="phones$ | async as phones">
+  <div *ngFor="let phone of phones">
+    {{ phone.title }}
+  </div>
+</ng-container>
+
+

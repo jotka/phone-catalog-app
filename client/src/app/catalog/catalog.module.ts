@@ -4,10 +4,14 @@ import { CatalogRoutingModule } from './catalog-routing.module'
 
 import { PhoneListComponent } from './containers/phone-list/phone-list.component'
 import { PhoneDetailComponent } from './components/phone-detail/phone-detail.component'
+import { CommonModule } from '@angular/common'
 
 
 @NgModule({
-  imports: [CatalogRoutingModule],
+  imports: [
+    CommonModule,
+    CatalogRoutingModule
+  ],
   declarations: [
     PhoneListComponent,
     PhoneDetailComponent
