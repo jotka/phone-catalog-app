@@ -11,7 +11,7 @@ import { CatalogService } from '../services/catalog.service'
 @Injectable()
 export class CatalogEffects {
   @Effect()
-  fetchPersonalData$ = this.actions$.ofType(catalogActions.FETCH_PHONES).pipe(
+  fetchPhones$ = this.actions$.ofType(catalogActions.FETCH_PHONES).pipe(
     switchMap((action: catalogActions.FetchPhones) => {
       return this.service.getPhones().pipe(
         map(

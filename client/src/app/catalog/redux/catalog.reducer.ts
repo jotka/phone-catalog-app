@@ -36,3 +36,7 @@ export const getPhonesState = createFeatureSelector<CatalogState>('catalog')
 export const getPhones = createSelector(getPhonesState, (state: CatalogState): Array<Phone> => {
   return state ? state.phones : []
 })
+
+export const isLoading = createSelector(getPhonesState, (state: CatalogState): boolean => {
+  return state ? state.loadingPhones : false
+})
