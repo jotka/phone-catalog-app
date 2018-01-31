@@ -1,6 +1,7 @@
 mat-card {
-  padding: 50px;
   width: 800px;
+  margin: 30px;
+  padding: 50px;
 }
 
 .card-img {

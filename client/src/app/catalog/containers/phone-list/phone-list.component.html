@@ -1,9 +1,6 @@
-<div class="">
-  <ul>
-      <div *ngFor="let phone of phones">
-        <li><app-phone-detail [phone]="phone"></app-phone-detail></li>
-      </div>
-  </ul>
+<mat-spinner></mat-spinner>
+<div *ngFor="let phone of phones">
+  <app-phone-detail [phone]="phone"></app-phone-detail>
 </div>
 
 

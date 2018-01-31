@@ -5,14 +5,15 @@ import { CatalogRoutingModule } from './catalog-routing.module'
 
 import { PhoneListComponent } from './containers/phone-list/phone-list.component'
 import { PhoneDetailComponent } from './components/phone-detail/phone-detail.component'
-import { MatCardModule } from '@angular/material'
+import { MatCardModule, MatProgressSpinnerModule } from '@angular/material'
 
 
 @NgModule({
   imports: [
     CommonModule,
     CatalogRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     PhoneListComponent,
