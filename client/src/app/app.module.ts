@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects'
 import { CatalogService } from './catalog/services/catalog.service'
 import { HttpClientModule } from '@angular/common/http'
 import { Url } from './global/url'
+import { MatButtonModule } from '@angular/material'
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { Url } from './global/url'
       maxAge: 25 //  Retains last 25 states
     }),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule
   ],
   providers: [
     Url,
