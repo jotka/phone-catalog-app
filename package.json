@@ -6,8 +6,9 @@
   "description": "Show all available phones",
   "repository": "https://github.com/debiasej/phone-catalog-app.git",
   "scripts": {
-    "start": "concurrently \"npm run server\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm run server --prefix server",
+    "client": "npm run start --prefix client",
     "precommit": "lint-staged",
     "lint": "standard --fix --env mocha"
   },
