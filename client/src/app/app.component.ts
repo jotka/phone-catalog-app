@@ -24,7 +24,6 @@ export class AppComponent implements OnInit, OnDestroy {
       .select(appReducer.isFirstAccess)
       .subscribe((firstAccess: boolean) => {
         this.firstAccess = firstAccess
-        console.log("firstAccess: ", this.firstAccess)
       })
   }
 
