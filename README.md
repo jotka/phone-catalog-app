@@ -33,4 +33,4 @@ $ npm start
 ```
 
 ## Code Styleguide
-* I am use [Standard JS](https://standardjs.com/) so all developer's code is formatted the same way. Please check [here](https://standardjs.com/#are-there-text-editor-plugins) how to enable it for your IDE
+* I use [Standard JS](https://standardjs.com/) so all developer's code is formatted the same way. Please check [here](https://standardjs.com/#are-there-text-editor-plugins) how to enable it for your IDE
