@@ -8,7 +8,7 @@ import { Phone } from '../../models/catalog.model'
   styleUrls: ['./phone-detail.component.css']
 })
 export class PhoneDetailComponent implements OnInit {
-  @Input() phone: Phone
+  @Input() phone: Phone;
 
   constructor() {}
 

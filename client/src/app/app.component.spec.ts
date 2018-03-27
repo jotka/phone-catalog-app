@@ -12,7 +12,7 @@ describe('AppComponent', () => {
   const reducers: ActionReducerMap<any> = {
     app: appReducer.reducer,
     catalog: catalogReducer.reducer
-  }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,33 +24,33 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents()
-  }))
+  }));
 
 
   it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent)
-    const app = fixture.debugElement.componentInstance
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy()
-  }))
+  }));
 
   it(`should have as title 'Phone Catalog'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent)
-    const app = fixture.debugElement.componentInstance
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Phone Catalog')
-  }))
+  }));
 
   it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent)
-    fixture.detectChanges()
-    const compiled = fixture.debugElement.nativeElement
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Phone Catalog')
-  }))
+  }));
 
   it('should render button', async(() => {
-    const fixture = TestBed.createComponent(AppComponent)
+    const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges()
-    const compiled = fixture.debugElement.nativeElement
+    const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('button').textContent).toContain('Show catalog')
   }))
 
-})
+});

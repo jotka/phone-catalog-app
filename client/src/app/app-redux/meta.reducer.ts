@@ -6,7 +6,7 @@ import { storeFreeze } from 'ngrx-store-freeze'
 
 const storage = (): Storage => {
   return sessionStorage || window.sessionStorage
-}
+};
 
 export function storageSyncReducer(reducer: ActionReducer<any>): ActionReducer<any> {
   return localStorageSync({
@@ -19,4 +19,4 @@ export function storageSyncReducer(reducer: ActionReducer<any>): ActionReducer<a
 
 export const metaReducers: Array<MetaReducer<any, any>> = !environment.production
   ? [storeFreeze, storageSyncReducer]
-  : [storageSyncReducer]
+  : [storageSyncReducer];

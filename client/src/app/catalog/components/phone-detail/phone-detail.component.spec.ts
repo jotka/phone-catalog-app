@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material'
 
 describe('PhoneDetailComponent', () => {
   let component: PhoneDetailComponent
-  let fixture: ComponentFixture<PhoneDetailComponent>
+  let fixture: ComponentFixture<PhoneDetailComponent>;
 
   const testData = {
     id: "A2IAMUC55K9EUL",
@@ -17,7 +17,7 @@ describe('PhoneDetailComponent', () => {
     color: "negro",
     price: "137,99 €",
     stock: 4
-  }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -29,12 +29,12 @@ describe('PhoneDetailComponent', () => {
       ]
     })
     .compileComponents()
-  }))
+  }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PhoneDetailComponent)
-    component = fixture.componentInstance
-    component.phone = testData
+    fixture = TestBed.createComponent(PhoneDetailComponent);
+    component = fixture.componentInstance;
+    component.phone = testData;
     fixture.detectChanges()
   })
 
@@ -48,13 +48,13 @@ describe('PhoneDetailComponent', () => {
 
   it('should render card', async(() => {
     fixture.detectChanges()
-    const compiled = fixture.debugElement.nativeElement
+    const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('mat-card')).toBeDefined()
   }))
 
   it('should render a image', async(() => {
     fixture.detectChanges()
-    const compiled = fixture.debugElement.nativeElement
+    const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('img')).toBeDefined()
   }))
 

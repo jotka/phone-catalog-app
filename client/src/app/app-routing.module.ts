@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: './catalog/catalog.module#CatalogModule'
   },
   { path: '**', redirectTo: '/' }
-]
+];
 
 
 @NgModule({

@@ -12,7 +12,7 @@ export const initialState: CatalogState = {
   phones: [],
   loadingPhones: false,
   error: null
-}
+};
 
 export function reducer(state: CatalogState = initialState, action: catalogActions.All): CatalogState {
   switch (action.type) {
@@ -31,12 +31,12 @@ export function reducer(state: CatalogState = initialState, action: catalogActio
   }
 }
 
-export const getPhonesState = createFeatureSelector<CatalogState>('catalog')
+export const getPhonesState = createFeatureSelector<CatalogState>('catalog');
 
 export const getPhones = createSelector(getPhonesState, (state: CatalogState): Array<Phone> => {
   return state ? state.phones : []
-})
+});
 
 export const isLoading = createSelector(getPhonesState, (state: CatalogState): boolean => {
   return state ? state.loadingPhones : false
-})
+});

@@ -22,7 +22,7 @@ export class CatalogEffects {
         })
       )
     })
-  )
+  );
 
 
   constructor(private actions$: Actions, private service: CatalogService) {}

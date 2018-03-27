@@ -22,12 +22,12 @@ export class PhoneListComponent implements OnInit, OnDestroy {
   constructor(private store: Store<appReducer.State>) {}
 
   ngOnInit() {
-    this.isLoading$ = this.store.select(catalogReducer.isLoading)
+    this.isLoading$ = this.store.select(catalogReducer.isLoading);
     this.phonesSub = this.store
       .select(catalogReducer.getPhones)
       .subscribe((phones: Array<Phone>) => {
         this.phones = phones
-    })
+    });
 
     this.store.dispatch(new catalogActions.FetchPhones())
   }

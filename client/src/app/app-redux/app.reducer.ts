@@ -6,7 +6,7 @@ export interface State {
 
 export const initialState: State = {
   firstAccess: true
-}
+};
 
 export function reducer(state: State = initialState, action: appActions.All): State {
   switch (action.type) {

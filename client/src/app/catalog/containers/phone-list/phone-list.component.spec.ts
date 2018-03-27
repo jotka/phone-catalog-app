@@ -37,23 +37,23 @@ describe('PhoneListComponent', () => {
       ]
     })
     .compileComponents()
-  }))
+  }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PhoneListComponent)
-    component = fixture.componentInstance
-    store = fixture.debugElement.injector.get(Store)
+    fixture = TestBed.createComponent(PhoneListComponent);
+    component = fixture.componentInstance;
+    store = fixture.debugElement.injector.get(Store);
     fixture.detectChanges()
-  })
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy()
-  })
+  });
 
   it('store and props should be defined', () => {
     expect(store).toBeDefined()
-    expect(component.isLoading$).toBeDefined()
-    expect(component.phonesSub).toBeDefined()
+    expect(component.isLoading$).toBeDefined();
+    expect(component.phonesSub).toBeDefined();
     expect(component.phones).toBeDefined()
   })
 })

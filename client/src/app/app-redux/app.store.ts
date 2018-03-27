@@ -11,7 +11,7 @@ import { reducer as  catalogReducer } from '../catalog/redux/catalog.reducer'
 export const reducersMap: ActionReducerMap<any> = {
   app: fromApp.reducer,
   catalog: catalogReducer
-}
+};
 
 export * from './app.reducer'
 
